@@ -63,11 +63,15 @@ function calculateCorrectAnswer() {
 }
 
 function incrementScore() {
-
+    //Retrieves current score from DOM and increments it
+    let oldScore = parseInt(document.getElementById('score').innerText);
+    document.getElementById('score').innerText = ++oldScore;
 }
 
 function incrementWrongAnswer() {
-
+    //Retrieves incorrect answers' tally from DOM and increments it
+    let oldScore = parseInt(document.getElementById('wrong').innerText);
+    document.getElementById('wrong').innerText = ++oldScore;
 }
 
 function displayAdditionQuestion(operand1, operand2) {
