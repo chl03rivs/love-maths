@@ -25,7 +25,6 @@ body {
     padding-right: 5px;
 }
 /*Game layout */
-
 .game-area {
     background-color: #30469b;
     box-sizing: border-box;
@@ -53,8 +52,11 @@ body {
 }
 
 .controls-area {
-    width: 85%;
     margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 #score {
@@ -104,19 +106,19 @@ body {
     border-radius: 50%;
     background-color: white;
     border: 10px solid;
-    width: 4rem;
-    height: 4rem;
-    font-size: 2rem;
-    margin: 10px;
+    width: 6rem;
+    height: 6rem;
+    font-size: 65px;
+    margin: 10px 10px 30px;
     transition: all 0.5s;
 }
 
 .btn-big::after {
     content: attr(data-type);
-    font-size: 1rem;
+    font-size: 25px;
+    left: -10%;
     color: white;
     position: relative;
-    left: -0.5em;
 }
 
 .btn-minus {
@@ -176,24 +178,17 @@ body {
 }
 
 /*Media queries*/
-
 @media (max-width: 414px) {
-    .controls-area {
-        width: 100%;
-    }
-
     .btn-big {
-        margin: 10px;
-        padding: 5px;
+        padding: 4px;
         border: 5px solid;
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
+        width: 3rem;
+        height: 3rem;
+        font-size: 30px;
     }
 
     .btn-big::after {
         font-size: 0.6rem;
-        left: -0.7rem;
     }
 
     .question-area {
@@ -235,12 +230,8 @@ body {
 
 @media (max-width: 320px) {
     .controls-area {
-        width: 75%;
+        width: 90%;
         margin: 10px auto;
-    }
-
-    .btn-big {
-        margin: 10px 10px;
     }
     .question-area {
         padding: 10px 0;
