@@ -13,8 +13,10 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
+
     runGame('addition');
 });
+
 //Main game loop
 function runGame(gameType) {
     //Creates random numbers (between 1 and 25)
@@ -45,8 +47,11 @@ function incrementWrongAnswer() {
 
 }
 
-function displayAdditionQuestion() {
-
+function displayAdditionQuestion(operand1, operand2) {
+    //Fetch operation elements from the html doc
+    document.getElementById('operand1').textContent = operand1;
+    document.getElementById('operand2').textContent = operand2;
+    document.getElementById('operator').textContent = '+';
 }
 
 function displaySubtractQuestion() {
