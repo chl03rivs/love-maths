@@ -13,10 +13,20 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
+    runGame('addition');
 });
+//Main game loop
+function runGame(gameType) {
+    //Creates random numbers (between 1 and 25)
+    let num1 = Math.floor(Math.random() * 25) + 1;
+    let num2 = Math.floor(Math.random() * 25) + 1;
 
-function runGame() {
-
+    if(gameType === 'addition') {
+        displayAdditionQuestion(num1, num2);
+    } else {
+        alert(`Unknown game type: ${gameType}`);
+        throw `Unknown game type ${gameType}. Aborting!`;
+    }
 }
 
 function checkAnswer() {
