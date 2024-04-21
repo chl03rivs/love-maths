@@ -17,7 +17,10 @@ body {
 
 .heading {
     text-align: center;
+    display: flex;
+    align-items: center;
     font-size: 2.5rem;
+    justify-content: center;
 }
 
 .logo {
