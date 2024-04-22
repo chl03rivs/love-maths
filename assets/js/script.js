@@ -41,6 +41,12 @@ function checkAnswer() {
     //Fetches the user's answer from the input box
     let userAnswer = parseInt(document.getElementById('answer-box').value);
 
+    // Check if userAnswer is a valid number
+    if (isNaN(userAnswer)) {
+        alert('Please enter a valid number.');
+        return; // Exit the function if userAnswer is not a number
+    }
+
     //Checks the user's answer against the correct answer
     let calculatedAnswer = calculateCorrectAnswer();
     let isCorrect = userAnswer === calculatedAnswer[0];
